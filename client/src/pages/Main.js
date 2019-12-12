@@ -14,9 +14,11 @@ class Main extends Component {
 
                 <div className="login-container">
                     <h1>Login Here</h1>
-                    <Formik onSubmit={(values) => console.log('submitted values= ',values)}>
+                    <Formik 
+                    initialValues={{ fullname: "John Snow"}} 
+                    onSubmit={(values) => console.log('submitted values= ',values)}>
                         {(props) => (<form onSubmit={props.handleSubmit}>
-                            <input type='text' name='fullname' placeholder='Full name' />
+                            <input type='text' name='fullname' value={props.values.fullname} placeholder='Full name' />
                             <br />
                             <input type='email' name='email' placeholder='Enter email' />
                             <br />
