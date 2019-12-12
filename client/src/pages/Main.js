@@ -6,13 +6,16 @@ class Main extends Component {
     render() {
         return (
             <div className='main-container'>
+            
+                <div>
+                    <h1>Login Here</h1>
+                </div>
 
-                <h1>main page</h1>
 
 
-
-                <Link className="profile-link" to="/profile">Profile</Link>
-
+                <div className="profile-link">
+                    <Link className="profile-link" to="/profile">Profile</Link>
+                </div>
 
             </div>
 
