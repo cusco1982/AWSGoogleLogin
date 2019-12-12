@@ -14,9 +14,8 @@ class Main extends Component {
 
                 <div className="login-container">
                     <h1>Login Here</h1>
-                    <Formik>
-                        
-                        <form>
+                    <Formik onSubmit={(values) => console.log('submitted values= ',values)}>
+                        {(props) => (<form onSubmit={props.handleSubmit}>
                             <input type='text' name='fullname' placeholder='Full name' />
                             <br />
                             <input type='email' name='email' placeholder='Enter email' />
@@ -29,7 +28,7 @@ class Main extends Component {
                             <input type='checkbox' name='terms' /> <label>Terms&Conditions</label>
                             <br />
                             <button type='submit'>Submit</button>
-                        </form>
+                        </form>)}
                     </Formik>
                 </div>
 
