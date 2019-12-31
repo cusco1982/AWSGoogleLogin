@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Formik } from "formik";
+import { Formik, Form } from "formik";
 
 
 class Main extends Component {
@@ -17,7 +17,7 @@ class Main extends Component {
                     <Formik 
                     initialValues={{ fullname: "John Snow"}} 
                     onSubmit={(values) => console.log('submitted values= ',values)}>
-                        {(props) => (<form onSubmit={props.handleSubmit} >
+                        {(props) => (<Form>
                             <input 
                             type='text' name='fullname' 
                             value={props.values.fullname} 
@@ -53,7 +53,7 @@ class Main extends Component {
                             <br />
                             <button type='submit'>Submit</button>
 
-                        </form>)}
+                        </Form>)}
                     </Formik>
                 </div>
 
