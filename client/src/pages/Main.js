@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 
 
 class Main extends Component {
@@ -18,11 +18,7 @@ class Main extends Component {
                     initialValues={{ fullname: "John Snow"}} 
                     onSubmit={(values) => console.log('submitted values= ',values)}>
                         {(props) => (<Form>
-                            <input 
-                            type='text' name='fullname' 
-                            value={props.values.fullname} 
-                            onChange={props.handleChange}
-                            placeholder='Full name'/>
+                            <Field name="fullname"/>
                             <br />
                             <input 
                             type='email' name='email' 
