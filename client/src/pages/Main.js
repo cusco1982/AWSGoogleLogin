@@ -17,7 +17,7 @@ class Main extends Component {
                     <Formik 
                     initialValues={{ fullname: "John Snow"}} 
                     onSubmit={(values) => console.log('submitted values= ',values)}>
-                        {(props) => (<form onSubmit={props.handleSubmit}>
+                        {(props) => (<form onSubmit={props.handleSubmit} >
                             <input 
                             type='text' name='fullname' 
                             value={props.values.fullname} 
@@ -43,12 +43,16 @@ class Main extends Component {
 
                             <input type='radio' 
                             onChange={props.handleChange}
-                            name='gender' value='femail' /> <label>Female</label>
+                            name='gender' value='female' /> <label>Female</label>
                             <br />
 
-                            <input type='checkbox' name='terms' /> <label>Terms&Conditions</label>
+                            <input type='checkbox'
+                            value={props.values.terms} 
+                            onChange={props.handleChange}
+                            name='terms' /> <label>Terms&Conditions</label>
                             <br />
                             <button type='submit'>Submit</button>
+
                         </form>)}
                     </Formik>
                 </div>
