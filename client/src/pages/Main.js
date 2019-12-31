@@ -20,17 +20,9 @@ class Main extends Component {
                         {(props) => (<Form>
                             <Field name="fullname"/>
                             <br />
-                            <input 
-                            type='email' name='email' 
-                            value={props.values.email} 
-                            onChange={props.handleChange}
-                            placeholder='Enter email' />
+                            <Field name="email" type="email" placeholder="Enter email"/>
                             <br />
-                            <input 
-                            type='password' name='password' 
-                            value={props.values.password} 
-                            onChange={props.handleChange}
-                            placeholder='Enter password' />
+                            <Field name="password" type="password" placeholder="Enter password"/>
                             <br />
 
                             <input type='radio'
